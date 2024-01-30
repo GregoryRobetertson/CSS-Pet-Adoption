@@ -1,0 +1,98 @@
+/* Apply a reset to remove default margin and padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  background-image: url('https://media.istockphoto.com/id/1516239450/photo/love-portrait-and-family-with-dog-at-animal-shelter-for-adoption-at-kennel.webp?b=1&s=170667a&w=0&k=20&c=XU-0AYlpE7qJboU--vZ5wdxJzFNkfJUPtwtMuLNLUi8=');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fixed background for better visibility of content */
+  background-color: rgba(0, 128, 0, 0.5); /* Greenish color with transparency */
+  color: #fff; /* Text color */
+  padding: 40px; /* Increased padding for demonstration purposes */
+  padding-bottom: 60px; /* Adjust the padding to leave space for the footer */
+}
+
+/* Additional styling for navigation links */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; /* Add padding to the navbar */
+  background-color: white;
+ 
+}
+
+nav #logo {
+  color: black;
+  font-size: 24px; /* Increase font size for the logo */
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 15px; /* Add margin to space out the navigation links */
+  transition: color 0.3s ease; /* Add a smooth color transition on hover */
+}
+
+nav a:hover {
+  color: #ffeb3b; /* Yellow color on hover */
+}
+
+/* Styling for the home-text section */
+.home-text {
+  background-color: rgba(211, 211, 211, 0.8); /* Light grey with transparency */
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex: 1;
+}
+
+.home-text h1 {
+  font-size: 36px;
+  color: black; /* Dark text color */
+  margin-bottom: 10px;
+}
+
+.home-text h2 {
+  font-size: 24px;
+  color: #554; 
+}
+
+.home-text p {
+  font-size: 20px;
+  color: #554;
+}
+
+/* Styling for the line between main content and footer */
+.separator-line {
+  border-top: 1px solid white;
+  
+}
+
+/* Styling for the footer */
+footer {
+  background-color: black; 
+  padding: 20px;
+  color: white; 
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ 
+}
