@@ -4,14 +4,13 @@
 }
 
 body {
-    min-height: 100vh;
-    background-color: lightblue;
-    font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
+  min-height: 100vh;
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-/* Additional styling for navigation links */
 header {
   display: flex;
   align-items: center;
@@ -19,7 +18,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000; /* Ensure the nav bar appears on top of other elements */
+  z-index: 1000;
   background-color: white;
 }
 
@@ -35,7 +34,7 @@ nav ul {
 }
 
 nav a {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-style: italic;
   text-decoration: none;
   color: black;
@@ -48,21 +47,25 @@ nav a:hover {
   color: #ffeb3b;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+main {
+  margin-top: 100px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card {
-    box-sizing: border-box;
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    overflow: hidden;
-    background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-       border-radius: 8px;
-       transition: transform 0.3s ease;
+  box-sizing: border-box;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
@@ -70,9 +73,9 @@ nav a:hover {
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
 }
 
 .card-content {
@@ -88,38 +91,53 @@ p {
   color: #666;
 }
 
- /* Styling for the footer */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
 
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-    .contact-info {
-      text-align: left;
-    }
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .contact-info h4 {
-      color: #ffeb3b;
-      margin-bottom: 10px;
-    }
+.contact-info {
+  text-align: left;
+}
 
-    .contact-info p {
-      margin: 5px 0;
-    }
+.contact-info h4 {
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
 
-    .copyright {
-      text-align: right;
-    }
+.contact-info p {
+  margin: 5px 0;
+}
 
-    .copyright p {
-      font-size: 12px;
-    }
+.copyright {
+  text-align: right;
+}
+
+.copyright p {
+  font-size: 12px;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack navigation links vertically on smaller screens */
+    align-items: center; /* Center-align navigation links */
+  }
+}
