@@ -1,5 +1,5 @@
 /* Apply a reset to remove default margin and padding */
-body, h1, h2, h3, p, ul, li {
+* {
   margin: 0;
   padding: 0;
 }
@@ -13,29 +13,26 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-color: rgba(0, 64, 0, 0.8);
-  color: #fff;
   padding: 40px;
-   font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Additional styling for navigation links */
-nav {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensure the nav bar appears on top of other elements */
   background-color: white;
 }
 
-nav #logo  {
+nav #logo {
   color: black;
   font-size: 24px;
   font-weight: bold;
-}
-
-nav i.fas.fa-paw {
-  color: #000000;
-  font-size: 24px; 
 }
 
 nav ul {
@@ -44,8 +41,8 @@ nav ul {
 }
 
 nav a {
-    font-family: 'Lora', serif;
-    font-style: italic;
+  font-family: 'Lora', serif;
+  font-style: italic;
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -57,6 +54,32 @@ nav a:hover {
   color: #ffeb3b;
 }
 
+/* Styling for the hero-image section */
+.hero-image {
+  text-align: center;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Set a maximum height to control the image size */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-bottom: 2px solid #fff; /* Optional border at the bottom */
+}
+
+/* Additional styling if you want to add overlay text or other elements on the hero image */
+.hero-image .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
 /* Styling for the home-text section */
 .home-text {
   background-color: rgba(211, 211, 211, 0.19);
@@ -64,7 +87,7 @@ nav a:hover {
   text-align: center;
   flex: 1;
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -76,7 +99,6 @@ nav a:hover {
 }
 
 .home-text h2 {
-  font-size: 24px;
   color: black;
 }
 
@@ -86,28 +108,25 @@ nav a:hover {
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    background-color: #ffeb3b;
-    color: #000;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffeb3b;
+  color: #000;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .cta-button:hover {
-  background-color: #ffc107; 
+  background-color: #ffc107;
 }
 
-/* Styling for the footer */
-.footer {
-  background-color: black;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  margin-top: auto; 
+/* Styling for the main content to appear at the bottom */
+main {
+  margin-top: auto;
+  margin-bottom: 0;
 }
