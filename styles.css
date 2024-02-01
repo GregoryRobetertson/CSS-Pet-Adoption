@@ -8,13 +8,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Set a minimum height for the content area to fill the viewport */
-  background-image: url('https://media.istockphoto.com/id/1516239450/photo/love-portrait-and-family-with-dog-at-animal-shelter-for-adoption-at-kennel.webp?b=1&s=170667a&w=0&k=20&c=XU-0AYlpE7qJboU--vZ5wdxJzFNkfJUPtwtMuLNLUi8=');
+  background-image: url("https://media.istockphoto.com/id/1516239450/photo/love-portrait-and-family-with-dog-at-animal-shelter-for-adoption-at-kennel.webp?b=1&s=170667a&w=0&k=20&c=XU-0AYlpE7qJboU--vZ5wdxJzFNkfJUPtwtMuLNLUi8=");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-color: rgba(0, 64, 0, 0.8);
   padding: 40px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Additional styling for navigation links */
@@ -22,14 +22,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   width: 100%;
-  top: 0;
-  z-index: 1000; /* Ensure the nav bar appears on top of other elements */
   background-color: white;
 }
 
-nav #logo {
+#logo {
   color: black;
   font-size: 24px;
   font-weight: bold;
@@ -41,7 +38,7 @@ nav ul {
 }
 
 nav a {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-style: italic;
   text-decoration: none;
   color: black;
