@@ -4,6 +4,8 @@
   padding: 0;
 }
 
+
+
 /* Additional styling for navigation links */
 header {
   display: flex;
@@ -42,7 +44,7 @@ nav a {
     display: grid;
     min-height: 100vh;
     background-color: lightblue;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 300px 1fr 1fr;
     grid-template-areas: 
     'header header header'
     'sidebar main main'
@@ -69,12 +71,38 @@ nav a {
       padding: 10px;
 }
 
-.container {
+.flex-container {
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+  
+    margin: 0 auto;
 }
+
+ .new-arrival {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+   
+}
+
+.new-arrival img {
+   width: 200px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    height: 300px;
+}
+
+.new-arrival img:hover {
+    transform: scale(1.1);
+}
+
+
+.new-arrival p {
+    width: 200px;
+}
+
 
 .footer {
     grid-area: footer;
@@ -113,4 +141,23 @@ footer {
 
 .copyright p {
   font-size: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-areas: 
+    'header header header'
+    'sidebar sidebar sidebar'
+    'main main main'
+    'footer footer footer'
+    ;
+  }
+  .main {
+  grid-area: main;
+  grid-template-columns: 1fr;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
 }

@@ -89,7 +89,7 @@ nav a:hover {
   transform: translate(-50%, -50%);
 }
 
-.home-text h1 {
+.home-text h2 {
   font-size: 36px;
   color: black;
   margin-bottom: 10px;
@@ -116,14 +116,32 @@ nav a:hover {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  animation: ctaAnimation 3s infinite; /* Apply the animation with a duration of 3 seconds and infinite loop */
 }
 
 .cta-button:hover {
   background-color: #ffc107;
+  animation: none; /* Remove the animation on hover to avoid conflict */
 }
 
 /* Styling for the main content to appear at the bottom */
 main {
   margin-top: auto;
   margin-bottom: 0;
+}
+
+/* keyframe */
+@keyframes ctaAnimation {
+  0% {
+    transform: scale(1);
+    background-color: #ffeb3b;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #ffc107;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #ffeb3b;
+  }
 }
